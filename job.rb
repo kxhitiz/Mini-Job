@@ -9,6 +9,7 @@ class Job
     @id = @@job_id
     @title = title
     @description = description
+    calculate_submission_date()
     @period = period
     if (@period < 1)
       print "\n \n Warning!! Your Job Validity Period is Set to less than 1 Day \n \n"

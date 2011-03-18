@@ -12,10 +12,13 @@ class Applicant
   def display_applied_jobs
     @applied_jobs
     @applied_jobs.each do |x|
-      print "Job Id: #{x.id} \nJob Title: #{x.title} \nJob Description: #{x.description} \nSubmission Date: #{x.submission_date} \n \n "
+      print "Job Id: #{x.id} \nJob Title: #{x.title} \nJob Description: #{x.description} \nSubmission Date: #{x.submission_date} \nJob Owned By: #{x.requestor_id} \n \n "
+    end
   end
 
   def apply_for_job=(job_object)
-    @applied_jobs.push(job_object)
+    if job_object.is_a?(Job)
+      @applied_jobs.push(job_object)
+    end
   end
 end
