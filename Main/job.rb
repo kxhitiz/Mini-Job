@@ -31,6 +31,6 @@ class Job
   end
 
   def self.list_all_jobs
-    @all_jobs
+    $all_jobs
   end
 end
