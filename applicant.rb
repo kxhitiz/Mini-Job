@@ -11,9 +11,11 @@ class Applicant
 
   def display_applied_jobs
     @applied_jobs
+    @applied_jobs.each do |x|
+      print "Job Id: #{x.id} \nJob Title: #{x.title} \nJob Description: #{x.description} \nSubmission Date: #{x.submission_date} \n \n "
   end
 
-  def applied_jobs=(job_object)
+  def apply_for_job=(job_object)
     @applied_jobs.push(job_object)
   end
 end
