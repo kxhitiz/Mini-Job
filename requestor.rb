@@ -11,4 +11,5 @@ class Requestor
   def create_job=(job_object)
     job_object.requestor_id= @id
   end
+
 end

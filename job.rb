@@ -15,6 +15,7 @@ class Job
     puts "This job is requested by requestor of id: #{@requester_id}"
   end
 
+
   # def calculate
 
 end
